@@ -17,9 +17,15 @@ body {
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     height: 60%;
     margin: 0 5%;
 }
@@ -35,6 +41,8 @@ main {
 
     .btns {
         margin: 0 30px 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
 
         button {
@@ -112,6 +120,8 @@ main {
             border-radius: 10px;
             width: 80%;
             height: 14px;
+            background: -webkit-gradient(linear ,left top, right top ,from(hsl(6, 100%, 80%)), to(hsl(335, 100%, 65%)));
+            background: -o-linear-gradient(left ,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
             background: linear-gradient(to right ,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 
             .circle {
@@ -127,8 +137,12 @@ main {
     }
 
     .memoryNum {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin: 10px 30px 30px;
         font-weight: 700;
     }
@@ -136,9 +150,16 @@ main {
 
 @media screen and (max-width: 768px) {
     main {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         height: 90%;
     }
 
